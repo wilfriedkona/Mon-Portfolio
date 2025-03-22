@@ -1,36 +1,107 @@
 "use client"
 
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion'; // Si vous installez framer-motion
+import Image from 'next/image';
 
 const Hero = () => {
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  // Gestion du survol pour l'assombrissement progressif
+  const handleMouseEnter = () => {
+    if (imageRef.current) {
+      imageRef.current.style.transition = '1.5s';
+      imageRef.current.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (imageRef.current) {
+      imageRef.current.style.transition = '1.5s';
+      imageRef.current.style.backgroundColor = 'transparent';
+    }
+  };
+
+  // Animations au chargement
+  useEffect(() => {
+    const animateElements = () => {
+      const title = document.querySelector('.hero-title');
+      const subtitle = document.querySelector('.hero-subtitle');
+      const paragraph = document.querySelector('.hero-paragraph');
+      const buttons = document.querySelector('.hero-buttons');
+      const heroImage = document.querySelector('.hero-image-container');
+
+      const elements = [title, subtitle, paragraph, buttons, heroImage];
+      
+      elements.forEach((el, index) => {
+        if (el) {
+          setTimeout(() => {
+            el.classList.add('animate-in');
+          }, 300 * (index + 1));
+        }
+      });
+    };
+
+    animateElements();
+  }, []);
+
   return (
-    <motion.section 
-      className="min-h-screen flex flex-col justify-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center md:text-left">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Salut, je suis <span className="text-blue-600">Votre Nom</span>
-        </h1>
-        <h2 className="text-2xl md:text-3xl mb-8 text-gray-600 dark:text-gray-300">
-          Développeur Web Full Stack
-        </h2>
-        <p className="text-lg mb-10 max-w-2xl mx-auto md:mx-0">
-          Je crée des applications web modernes et performantes avec React, Next.js et TypeScript.
-        </p>
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-          <Link href="/projects" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-            Voir mes projets
-          </Link>
-          <Link href="/contact" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
-            Me contacter
-          </Link>
+    <section className="min-h-screen pt-20 flex flex-col items-center">
+      <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row px-4 py-10">
+        {/* Texte et boutons - à gauche en desktop, en bas en mobile */}
+        <div className="md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 md:pr-8">
+          <h1 className="hero-title opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-600 transform translate-y-10 transition-all duration-700">
+            Salut, je suis <span className="block text-white">Wilfried KONAN</span>
+          </h1>
+          
+          <h2 className="hero-subtitle opacity-0 text-2xl md:text-3xl mb-6 text-gray-700 dark:text-gray-300 transform translate-y-10 transition-all duration-700 delay-300">
+            Développeur Web Full Stack
+          </h2>
+          
+          <p className="hero-paragraph opacity-0 text-lg mb-8 text-gray-600 transform translate-y-10 transition-all duration-700 delay-500">
+            Je crée des applications web modernes et performantes avec React, Next.js et TypeScript.
+            Passionné par le développement web, je m'efforce toujours d'apprendre de nouvelles technologies
+            et de créer des expériences utilisateur exceptionnelles.
+          </p>
+          
+          <div className="hero-buttons opacity-0 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 transform translate-y-10 transition-all duration-700 delay-700">
+            <Link href="/projects" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-center">
+              Voir mes projets
+            </Link>
+            <Link href="/contact" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition text-center">
+              Me contacter
+            </Link>
+          </div>
+        </div>
+        
+        {/* Image - à droite en desktop, en haut en mobile */}
+        <div className="md:w-1/2 flex justify-center md:justify-end items-center">
+          <div 
+            className="hero-image-container relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl"
+            ref={imageRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Image
+              src="/images/developer.jpeg" 
+              alt="Votre profil"
+              fill
+              className="object-cover rounded-xl"
+              priority
+            />
+            <div className="absolute inset-0 bg-transparent transition-colors duration-1500 ease-in-out" />
+          </div>
         </div>
       </div>
-    </motion.section>
+      
+      {/* CSS pour les animations */}
+      <style jsx global>{`
+        .animate-in {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+      `}</style>
+    </section>
   );
 };
 
