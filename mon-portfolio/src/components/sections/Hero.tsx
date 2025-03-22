@@ -25,13 +25,14 @@ const Hero = () => {
   // Animations au chargement
   useEffect(() => {
     const animateElements = () => {
+      const smallLogo = document.querySelector('.small-logo');
       const title = document.querySelector('.hero-title');
       const subtitle = document.querySelector('.hero-subtitle');
       const paragraph = document.querySelector('.hero-paragraph');
       const buttons = document.querySelector('.hero-buttons');
       const heroImage = document.querySelector('.hero-image-container');
 
-      const elements = [title, subtitle, paragraph, buttons, heroImage];
+      const elements = [smallLogo, title, subtitle, paragraph, buttons, heroImage];
       
       elements.forEach((el, index) => {
         if (el) {
@@ -47,6 +48,18 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen pt-20 flex flex-col items-center">
+
+      {/* Petite image en haut à gauche */}
+      <div className="small-logo absolute top-0 left-0 opacity-0 transform translate-y-10 transition-all duration-700">
+        <Image
+          src="/images/drapeau.png"
+          alt="Logo"
+          width={220}
+          height={60}
+          priority
+        />
+      </div>
+
       <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row px-4 py-10">
         {/* Texte et boutons - à gauche en desktop, en bas en mobile */}
         <div className="md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 md:pr-8">
