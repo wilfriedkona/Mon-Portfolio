@@ -24,7 +24,7 @@ export default function RootLayout({
         </main>
         <footer className="bg-black text-white py-8">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p>© {new Date().getFullYear()} Votre Nom. Tous droits réservés.</p>
+            <p>© {new Date().getFullYear()} Votre Nom. Tous droits réservés. wilfried.konan@epitech.eu</p>
           </div>
         </footer>
       </body>

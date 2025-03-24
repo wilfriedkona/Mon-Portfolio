@@ -98,7 +98,7 @@ const Hero = () => {
         {/* Image - à droite en desktop, en haut en mobile */}
         <div className="md:w-1/2 flex justify-center md:justify-end items-center">
           <div
-            className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl"
+            className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl shadow-lg hover:shadow-2xl"
             ref={imageRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -110,7 +110,7 @@ const Hero = () => {
               className="object-cover rounded-xl"
               priority
             />
-            <div className="absolute inset-0 bg-transparent transition-colors duration-1500 ease-in-out" />
+            <div className="absolute inset-0 bg-black opacity-20 rounded-xl transition-opacity duration-700 ease-in-out hover:opacity-40" />
           </div>
         </div>
       </div>
