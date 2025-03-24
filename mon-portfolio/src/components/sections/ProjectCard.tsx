@@ -9,12 +9,13 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-      <div className="relative h-48">
+      <div className="relative h-48 w-full">
         <Image 
           src={project.image} 
           alt={project.title}
           fill
           className="object-cover"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 500vw, 33vw"
         />
       </div>
       <div className="p-6">

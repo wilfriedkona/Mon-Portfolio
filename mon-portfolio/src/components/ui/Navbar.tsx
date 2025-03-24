@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 shadow-sm z-10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-bold text-xl">VotreNom</Link>
+          <Link href="/" className="font-bold text-xl">Wilfried KONAN </Link>
           
           {/* Menu desktop */}
           <div className="hidden md:flex space-x-8">

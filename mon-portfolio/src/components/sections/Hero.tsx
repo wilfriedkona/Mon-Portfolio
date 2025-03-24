@@ -90,7 +90,7 @@ const Hero = () => {
         {/* Image - à droite en desktop, en haut en mobile */}
         <div className="md:w-1/2 flex justify-center md:justify-end items-center">
           <div 
-            className="hero-image-container relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl"
+            className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl"
             ref={imageRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
