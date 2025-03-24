@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 shadow-sm z-10">
+    <nav className="fixed top-0 w-full bg-gradient-to-r from-blue-900 to-black shadow-sm z-10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-bold text-xl">Wilfried KONAN </Link>
