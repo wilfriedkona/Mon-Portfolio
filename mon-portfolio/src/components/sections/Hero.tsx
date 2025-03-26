@@ -104,7 +104,7 @@ const Hero = () => {
             onMouseLeave={handleMouseLeave}
           >
             <Image
-              src="/images/developer.jpeg"
+              src="/images/dev.jpg"
               alt="Votre profil"
               fill
               className="object-cover rounded-xl"

@@ -6,6 +6,17 @@ import { Project } from '@/types';
 const featuredProjects: Project[] = [
   {
     id: 'project-1',
+    title: 'Site de Blogue',
+    description: 'Une plateforme complète pour blogueurs',
+    image: '/images/projects/ecommerce.png',
+    technologies: ['Laravel', 'MySql', 'language PHP, HTML, CSS', 'JavaScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/username/ecommerce',
+    demoUrl: 'https://ecommerce-demo.com',
+    featured: true
+  },
+
+  {
+    id: 'project-2',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
@@ -14,6 +25,19 @@ const featuredProjects: Project[] = [
     demoUrl: 'https://ecommerce-demo.com',
     featured: true
   },
+
+  {
+    id: 'project-1',
+    title: 'Application E-commerce',
+    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    image: '/images/projects/ecommerce.png',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/username/ecommerce',
+    demoUrl: 'https://ecommerce-demo.com',
+    featured: true
+  },
+
+  
   // Autres projets...
 ];
 
