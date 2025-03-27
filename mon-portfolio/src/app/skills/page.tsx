@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { getAllSkills } from '@/lib/data';
 import { Skill } from '@/types';
-import { CgNpm } from 'react-icons/cg';
 import Image from "next/image";
 
 export default function SkillsPage() {
@@ -22,11 +21,7 @@ export default function SkillsPage() {
         console.error("Erreur lors du chargement des compétences:", error);
       } finally {
         setIsLoading(false);
-        
-        // Délai pour les animations
-        setTimeout(() => {
-          setLoaded(true);
-        }, 100);
+        setTimeout(() => setLoaded(true), 100);
       }
     };
 
@@ -47,36 +42,17 @@ export default function SkillsPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-100 dark:from-gray-900 dark:to-blue-900">
         <div className="animate-pulse flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full bg-blue-300 mb-4"></div>
-          <div className="h-8 w-64 bg-gray-300 rounded"></div>
+          <div className="w-32 h-32 rounded-full bg-blue-200/50 mb-4"></div>
+          <div className="h-10 w-80 bg-blue-300/30 rounded-lg"></div>
         </div>
       </div>
     );
   }
 
-  // Fonction pour générer la couleur du dégradé basée sur le niveau de compétence
-  const getGradientColor = (proficiency: number) => {
-    const colors = {
-      1: 'from-blue-200 to-blue-300',
-      2: 'from-blue-300 to-blue-400',
-      3: 'from-blue-400 to-blue-500',
-      4: 'from-blue-500 to-blue-600',
-      5: 'from-blue-600 to-blue-700'
-    };
-    return colors[proficiency as keyof typeof colors];
-  };
-
-  // Fonction pour obtenir la largeur de la barre de progression
-  const getProgressWidth = (proficiency: number) => {
-    return `${proficiency * 20}%`;
-  };
-
-  // Obtenez l'icône appropriée pour la compétence
   const getSkillIcon = (iconName: string) => {
-    try {
-        const iconMap: Record<string, string> = {
+    const iconMap: Record<string, string> = {
       html5: '/images/skills/html.png',
       css3: '/images/skills/css.png',
       javascript: '/images/skills/js.png',
@@ -98,39 +74,35 @@ export default function SkillsPage() {
       docker: '/images/skills/docker.jpg',
       figma: '/images/skills/figma.jpg',
       vscode: '/images/skills/vscode.jpg',
+      // ... autres mappings
+      default: '/images/skills/default.svg'
     };
     
-    // Vérifie si l'icône existe dans la map, sinon retourne l'icône par défaut
-    return iconMap[iconName] ? iconMap[iconName] : '/images/skills/default.svg';
-  } catch (error) {
-    console.error("Erreur lors du chargement de l'icône:", error);
-    return '/images/skills/default.svg';
-  }
-};
+    return iconMap[iconName] || iconMap.default;
+  };
 
   return (
-    <div className="min-h-screen pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-black dark:via-blue-900 dark:to-purple-900">
+    <div className="min-h-screen pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-black dark:to-blue-900">
       <div className="max-w-7xl mx-auto px-4 pt-28">
-    
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0 transform -translate-y-4'}`}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Mes compétences
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Mon Arsenal Technologique
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
-            Voici un aperçu des technologies et outils que j'utilise pour créer des applications web modernes et performantes.
+            Un écosystème de technologies soigneusement sélectionnées pour créer des expériences web exceptionnelles.
           </p>
         </div>
 
         {/* Filtres de catégories */}
-        <div className={`flex flex-wrap gap-3 mb-12 transition-all duration-1000 delay-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`flex flex-wrap gap-4 mb-12 transition-all duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-5 py-2 rounded-full transition-all ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:shadow-md'
               }`}
             >
               {category.name}
@@ -139,59 +111,66 @@ export default function SkillsPage() {
         </div>
 
         {/* Grille de compétences */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredSkills.map((skill, index) => (
             <div 
               key={skill.name}
-              className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-700 hover:shadow-xl transform hover:-translate-y-1 ${
-                loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`
+                bg-white dark:bg-gray-800/50 
+                backdrop-blur-lg 
+                border border-gray-100 dark:border-gray-700 
+                rounded-2xl 
+                shadow-2xl 
+                overflow-hidden 
+                transform transition-all duration-700 
+                hover:scale-105 
+                ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+              `}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 mr-4 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 mr-6 bg-gradient-to-br from-blue-100 to-purple-200 dark:from-blue-900 dark:to-purple-900 rounded-2xl flex items-center justify-center shadow-lg">
                     <img 
                       src={getSkillIcon(skill.icon)}
                       alt={skill.name}
-                      className="w-8 h-8"
+                      className="w-10 h-10 object-contain"
                       onError={(e) => {
-                        // Fallback si l'image ne charge pas
                         const target = e.target as HTMLImageElement;
                         target.src = '/images/skills/default.svg';
                       }}
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl">{skill.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{skill.name}</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 capitalize">
                       {skill.category}
                     </p>
                   </div>
                 </div>
 
-                {/* Barre de progression */}
-                <div className="mt-4">
-                  <div className="flex justify-between mb-1">
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Niveau</span>
-                    <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.proficiency}/5</span>
+                {/* Barre de progression améliorée */}
+                <div className="mb-4">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Maîtrise</span>
+                    <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">{skill.proficiency}/5</span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
                     <div 
-                      className={`h-2.5 rounded-full bg-gradient-to-r ${getGradientColor(skill.proficiency)} transition-all duration-1000`}
+                      className="h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000"
                       style={{ 
-                        width: loaded ? getProgressWidth(skill.proficiency) : '0%'
+                        width: loaded ? `${skill.proficiency * 20}%` : '0%'
                       }}
                     ></div>
                   </div>
                 </div>
 
-                {/* Étoiles pour le niveau (alternative visuelle) */}
-                <div className="flex mt-3">
+                {/* Étoiles de niveau */}
+                <div className="flex mt-4 space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <svg 
                       key={i} 
-                      className={`w-5 h-5 ${i < skill.proficiency ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
+                      className={`w-6 h-6 ${i < skill.proficiency ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
                       fill="currentColor" 
                       viewBox="0 0 20 20"
                     >
@@ -204,36 +183,32 @@ export default function SkillsPage() {
           ))}
         </div>
 
-        {/* Section supplémentaire pour les statistiques */}
-        <div className={`mt-20 py-12 px-8 bg-white dark:bg-black rounded-xl shadow-lg transition-all duration-1200 delay-500 ${
+        {/* Section statistiques */}
+        <div className={`mt-16 grid md:grid-cols-3 gap-8 transition-all duration-1200 ${
           loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-3xl font-bold mb-8 text-center">Statistiques de compétences</h2>
+          <div className="bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 p-8 rounded-2xl shadow-xl">
+            <h3 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-200">Frontend</h3>
+            <div className="text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-2">
+              {skills.filter(s => s.category === 'frontend').length}
+            </div>
+            <p className="text-blue-700 dark:text-blue-300">Technologies maîtrisées</p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                {skills.filter(s => s.category === 'frontend').length}
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">technologies</p>
+          <div className="bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 p-8 rounded-2xl shadow-xl">
+            <h3 className="text-2xl font-bold mb-4 text-purple-800 dark:text-purple-200">Backend</h3>
+            <div className="text-5xl font-extrabold text-purple-600 dark:text-purple-400 mb-2">
+              {skills.filter(s => s.category === 'backend').length}
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-2">Backend</h3>
-              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400">
-                {skills.filter(s => s.category === 'backend').length}
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">technologies</p>
+            <p className="text-purple-700 dark:text-purple-300">Technologies maîtrisées</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 p-8 rounded-2xl shadow-xl">
+            <h3 className="text-2xl font-bold mb-4 text-green-800 dark:text-green-200">Niveau Moyen</h3>
+            <div className="text-5xl font-extrabold text-green-600 dark:text-green-400 mb-2">
+              {(skills.reduce((acc, curr) => acc + curr.proficiency, 0) / skills.length).toFixed(1)}
             </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-2">Niveau moyen</h3>
-              <div className="text-4xl font-bold text-green-600 dark:text-green-400">
-                {(skills.reduce((acc, curr) => acc + curr.proficiency, 0) / skills.length).toFixed(1)}
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">sur 5</p>
-            </div>
+            <p className="text-green-700 dark:text-green-300">Sur une échelle de 5</p>
           </div>
         </div>
       </div>
