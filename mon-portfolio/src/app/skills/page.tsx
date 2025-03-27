@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { getAllSkills } from '@/lib/data';
 import { Skill } from '@/types';
 import { CgNpm } from 'react-icons/cg';
+import Image from "next/image";
 
 export default function SkillsPage() {
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -110,6 +111,7 @@ export default function SkillsPage() {
   return (
     <div className="min-h-screen pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-black dark:via-blue-900 dark:to-purple-900">
       <div className="max-w-7xl mx-auto px-4 pt-28">
+    
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0 transform -translate-y-4'}`}>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Mes compétences
@@ -203,7 +205,7 @@ export default function SkillsPage() {
         </div>
 
         {/* Section supplémentaire pour les statistiques */}
-        <div className={`mt-20 py-12 px-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-1200 delay-500 ${
+        <div className={`mt-20 py-12 px-8 bg-white dark:bg-black rounded-xl shadow-lg transition-all duration-1200 delay-500 ${
           loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-3xl font-bold mb-8 text-center">Statistiques de compétences</h2>

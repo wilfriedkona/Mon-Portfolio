@@ -19,7 +19,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 'project-1',
+    id: 'project-2',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
@@ -30,7 +30,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 'project-1',
+    id: 'project-3',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
@@ -41,7 +41,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 'project-1',
+    id: 'project-4',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
@@ -52,7 +52,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 'project-1',
+    id: 'project-5',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
@@ -63,7 +63,7 @@ const allProjects: Project[] = [
   },
 
   {
-    id: 'project-1',
+    id: 'project-6',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',

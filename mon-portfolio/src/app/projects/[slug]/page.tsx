@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Github, ExternalLink, Calendar, Code } from 'lucide-react';
@@ -14,17 +14,15 @@ interface ProjectDetailPageProps {
 }
 
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const { slug } = params;
+  const { slug } = use(params); 
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [animationComplete, setAnimationComplete] = useState(false);
 
   useEffect(() => {
-    // Simuler le chargement des données
     const fetchProject = async () => {
       setIsLoading(true);
       try {
-        // Remplacer par l'appel API réel ou la méthode de récupération des données
         const projectData = await getProjectBySlug(slug);
         setProject(projectData);
       } catch (error) {
