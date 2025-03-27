@@ -66,7 +66,7 @@ const Hero = () => {
         {/* Texte et boutons - à gauche en desktop, en bas en mobile */}
         <div className="md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 md:pr-8">
           <h1 className="hero-title opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-600 transform translate-y-10 transition-all duration-700">
-            Salut, je suis <span className="block text-white">Wilfried KONAN</span>
+            Bonjour, je suis <span className="block text-white">Wilfried KONAN</span>
           </h1>
 
           <h2 className="hero-subtitle opacity-0 text-2xl md:text-3xl mb-6 text-gray-700 dark:text-gray-300 transform translate-y-10 transition-all duration-700 delay-300">

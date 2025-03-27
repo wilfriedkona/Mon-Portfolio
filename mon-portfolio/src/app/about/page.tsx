@@ -34,7 +34,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-black dark:to-blue-900">
       {/* Section Présentation */}
       <section className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1">
@@ -62,7 +62,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center">
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
+          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl shadow-white p-4 bg-gray-800 text-white rounded-full">
             <Image 
               src="/images/profil1.jpeg" 
               alt="Portrait professionnel de Wilfried KONAN"
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section Parcours */}
-      <section className="bg-white dark:bg-gray-800 py-16">
+      <section className="bg-white dark:bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
             <Image 
@@ -98,46 +98,60 @@ export default function AboutPage() {
                 <h3 className="font-semibold">Développeur Frontend</h3>
                 <p>WebAgency, Lyon - 2020-2022</p>
               </li>
+              <li className="border-l-4 border-blue-600 pl-4">
+                <h3 className="font-semibold">Développeur Frontend</h3>
+                <p>WebAgency, Lyon - 2020-2022</p>
+              </li>
+              <li className="border-l-4 border-blue-600 pl-4">
+                <h3 className="font-semibold">Développeur Frontend</h3>
+                <p>WebAgency, Lyon - 2020-2022</p>
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* Section Témoignages */}
-      <section className="py-16 bg-gradient-to-r from-blue-500 to-purple-600">
+        <section className="py-16 bg-gradient-to-r from-blue-800 to-purple-600">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl font-bold text-center mb-16 text-white">
             Ce qu'ils disent de moi
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12">
             {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg flex items-center space-x-6"
-              >
-                <div className="w-150 h-50 rounded-full overflow-hidden">
-                  <Image 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    width={200}
-                    height={130}
-                    className="object-cover"
-                  />
+                <div
+                key={index}
+                className="bg-white dark:bg-gray-900 rounded-2xl p-10 shadow-2xl transform transition-all duration-300 hover:scale-105"
+                >
+                <div className="flex flex-col items-center mb-6">
+                    <div className="w-40 h-40 mb-6 rounded-full border-4 border-blue-500 overflow-hidden shadow-lg">
+                    <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={160}
+                        height={160}
+                        className="object-cover w-full h-full"
+                    />
+                    </div>
+                    <div className="text-center">
+                    <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                        {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        {testimonial.role} - {testimonial.company}
+                    </p>
+                    </div>
                 </div>
-                <div>
-                  <p className="italic mb-4 text-gray-700 dark:text-gray-300">
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-500">{testimonial.role} - {testimonial.company}</p>
-                  </div>
+                <p className="italic text-center text-gray-700 dark:text-gray-300 text-lg">
+                    <span className="text-4xl text-blue-500 mr-2">"</span>
+                    {testimonial.quote}
+                    <span className="text-4xl text-blue-500 ml-2">"</span>
+                </p>
                 </div>
-              </div>
             ))}
-          </div>
+            </div>
         </div>
-      </section>
+        </section>
     </div>
   );
 }
