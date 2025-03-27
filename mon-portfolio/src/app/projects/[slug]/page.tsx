@@ -62,7 +62,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">Projet non trouvé</h1>
         <p className="mb-8">Le projet que vous recherchez n'existe pas ou a été supprimé.</p>
-        <Link href="/projects" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <Link href="/projects" className="px-4 py-2 bg-blue-100 text-white rounded-lg hover:bg-blue-700 transition">
           Retour aux projets
         </Link>
       </div>
@@ -70,12 +70,12 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-blue-900">
       <div className="max-w-5xl mx-auto px-4">
         {/* En-tête avec animation d'entrée */}
         <Link 
           href="/projects" 
-          className={`inline-flex items-center text-blue-600 mb-8 transition-all duration-500 ${
+          className={`inline-flex items-center text-blue-100 mb-8 transition-all duration-500 ${
             animationComplete ? 'opacity-100 transform-none' : 'opacity-0 -translate-x-4'
           }`}
         >
@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <div className={`transition-all duration-1100 ${
             animationComplete ? 'opacity-100 transform-none' : 'opacity-0 translate-y-12'
           }`}>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+            <div className="bg-white dark:bg-black rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bold mb-6 border-b border-gray-200 dark:border-gray-700 pb-3">
                 Informations
               </h3>
@@ -197,16 +197,16 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               </div>
             </div>
             
-            <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+            <div className="mt-8 bg-white dark:bg-black rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bold mb-4">Autres projets</h3>
               
               <div className="space-y-4">
                 {/* Remplacer par vos données réelles */}
-                <Link href="/projects/other-project-1" className="block p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition">
+                <Link href="/projects/other-project-1" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
                   <h4 className="font-medium">Application de gestion</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">React, Node.js</p>
                 </Link>
-                <Link href="/projects/other-project-2" className="block p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition">
+                <Link href="/projects/other-project-2" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
                   <h4 className="font-medium">Site e-commerce</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Next.js, Tailwind CSS</p>
                 </Link>

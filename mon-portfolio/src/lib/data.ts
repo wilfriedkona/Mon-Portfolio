@@ -3,17 +3,17 @@ import { Project, Skill } from '@/types';
 // Projets
 export const projects: Project[] = [
   {
-    id: 'ecommerce-platform',
+    id: 'project-1',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
-    image: '/images/projects/ecommerce.jpg',
+    image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',
     featured: true
   },
   {
-    id: 'portfolio-site',
+    id: 'project-2',
     title: 'Portfolio Personnel',
     description: 'Site portfolio responsive pour présenter mes projets et compétences',
     image: '/images/projects/portfolio.jpg',
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 'task-management',
+    id: 'project-3',
     title: 'Application de Gestion de Tâches',
     description: 'Application permettant de gérer des tâches avec des listes, des échéances et des rappels',
     image: '/images/projects/task-app.jpg',
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     featured: false
   },
   {
-    id: 'weather-app',
+    id: 'project-4',
     title: 'Application Météo',
     description: 'Application montrant les prévisions météo basées sur la localisation',
     image: '/images/projects/weather.jpg',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     featured: false
   },
   {
-    id: 'blog-platform',
+    id: 'project-5',
     title: 'Plateforme de Blog',
     description: 'Système de gestion de contenu pour blog avec authentification et commentaires',
     image: '/images/projects/blog.jpg',

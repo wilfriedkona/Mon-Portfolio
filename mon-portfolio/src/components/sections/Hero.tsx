@@ -98,13 +98,13 @@ const Hero = () => {
         {/* Image - à droite en desktop, en haut en mobile */}
         <div className="md:w-1/2 flex justify-center md:justify-end items-center">
           <div
-            className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl shadow-lg hover:shadow-2xl"
+            className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl shadow-lg hover:shadow-2xl shadow-white p-4 bg-gray-800 text-white rounded-lg"
             ref={imageRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <Image
-              src="/images/developer.jpeg"
+              src="/images/dev.jpeg"
               alt="Votre profil"
               fill
               className="object-cover rounded-xl"
