@@ -54,9 +54,9 @@ const Hero = () => {
       {/* Petite image en haut à gauche */}
       <div className="small-logo absolute top-0 left-0 opacity-0 transform translate-y-10 transition-all duration-700">
         <Image
-          src="/images/drapeau.png"
+          src="/images/signature.png"
           alt="Logo"
-          width={220}
+          width={300}
           height={60}
           priority
         />
