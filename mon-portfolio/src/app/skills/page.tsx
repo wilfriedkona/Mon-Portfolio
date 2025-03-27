@@ -82,7 +82,17 @@ export default function SkillsPage() {
   };
 
   return (
-    <div className="min-h-screen pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-black dark:to-blue-900">
+    <div className="relative min-h-screen pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-black dark:to-blue-900">
+      {/* Image de fond avec opacity */}
+      <div className="absolute inset-0 opacity-10 dark:opacity-50">
+        <Image 
+          src="/images/signature.png" 
+          alt="Background de compétences" 
+          layout="fill" 
+          objectFit="cover" 
+          quality={50}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 pt-28">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0 transform -translate-y-4'}`}>
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
