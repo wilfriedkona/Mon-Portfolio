@@ -1,13 +1,29 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
+  // États pour gérer l'animation de texte
+  const [subtitle, setSubtitle] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  // Liste des rôles à afficher en boucle
+  const roles = [
+    "Développeur Web Full-Stack Junior 🖥️",
+    "Développeur Mobile 📱",
+    "Infographe Designer UI / UX 🎨",
+    "E-Administration 📋", 
+    "Transformation Digitale 📈", 
+    "Chef de Projet Web 🖥️"
+  ];
+
+  // Référence pour l'image avec effet de survol
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Gestion du survol pour l'assombrissement progressif
+  // Gestion du survol pour l'assombrissement progressif de l'image
   const handleMouseEnter = () => {
     if (imageRef.current) {
       imageRef.current.style.transition = "1.5s";
@@ -22,7 +38,39 @@ const Hero = () => {
     }
   };
 
-  // Animations au chargement
+  // Hook pour gérer l'animation de texte dynamique
+  useEffect(() => {
+    // Récupération du rôle actuel
+    const currentRole = roles[currentRoleIndex];
+    
+    // Définition des vitesses de frappe et de suppression
+    const typingSpeed = isDeleting ? 50 : 100; // Suppression plus rapide que l'écriture
+    let timeout: NodeJS.Timeout;
+
+    // Logique d'animation du texte
+    if (!isDeleting && subtitle === currentRole) {
+      // Texte completement écrit, pause avant suppression
+      timeout = setTimeout(() => setIsDeleting(true), 2000);
+    } else if (isDeleting && subtitle === "") {
+      // Texte completement supprimé, passer au rôle suivant
+      setIsDeleting(false);
+      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+    } else {
+      // Animation d'écriture ou de suppression
+      timeout = setTimeout(() => {
+        setSubtitle(current => 
+          isDeleting 
+            ? current.slice(0, current.length - 1) // Suppression lettre par lettre
+            : currentRole.slice(0, current.length + 1) // Écriture lettre par lettre
+        );
+      }, typingSpeed);
+    }
+
+    // Nettoyage du timeout
+    return () => clearTimeout(timeout);
+  }, [subtitle, isDeleting, currentRoleIndex]);
+
+  // Animations au chargement des éléments
   useEffect(() => {
     const animateElements = () => {
       const smallLogo = document.querySelector(".small-logo");
@@ -49,9 +97,9 @@ const Hero = () => {
   return (
     <section
       className="min-h-screen pt-20 flex flex-col items-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/background.jpg')" }} // Chemin vers ton image de fond
+      style={{ backgroundImage: "url('/images/background.jpg')" }}
     >
-      {/* Petite image en haut à gauche */}
+      {/* Logo en haut à gauche */}
       <div className="small-logo absolute top-0 left-0 opacity-0 transform translate-y-10 transition-all duration-700">
         <Image
           src="/images/signature.png"
@@ -63,16 +111,18 @@ const Hero = () => {
       </div>
 
       <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row px-4 py-10">
-        {/* Texte et boutons - à gauche en desktop, en bas en mobile */}
         <div className="md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 md:pr-8">
           <h1 className="hero-title opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-600 transform translate-y-10 transition-all duration-700">
             Bonjour, je suis <span className="block text-white">Wilfried KONAN</span>
           </h1>
 
+          {/* Animation de texte dynamique */}
           <h2 className="hero-subtitle opacity-0 text-2xl md:text-3xl mb-6 text-gray-700 dark:text-gray-300 transform translate-y-10 transition-all duration-700 delay-300">
-            Développeur Web Full Stack
+            {subtitle}
+            <span className="animate-blink">|</span>
           </h2>
 
+          {/* Reste du composant inchangé */}
           <p className="hero-paragraph opacity-0 text-lg mb-8 text-gray-600 transform translate-y-10 transition-all duration-700 delay-500">
             Je crée des applications web modernes et performantes avec React, Next.js et TypeScript.
             Passionné par le développement web, je m'efforce toujours d'apprendre de nouvelles
@@ -95,7 +145,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image - à droite en desktop, en haut en mobile */}
+        {/* Image avec effet de survol */}
         <div className="md:w-1/2 flex justify-center md:justify-end items-center">
           <div
             className="hero-image-container relative w-full h-100 sm:h-100 md:h-96 lg:h-[700px] opacity-0 transform translate-y-10 transition-all duration-700 overflow-hidden rounded-xl shadow-lg hover:shadow-2xl shadow-white p-4 bg-gray-800 text-white rounded-lg"
@@ -115,11 +165,18 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* CSS pour les animations */}
+      {/* Styles globaux pour les animations */}
       <style jsx global>{`
         .animate-in {
           opacity: 1 !important;
           transform: translateY(0) !important;
+        }
+        .animate-blink {
+          animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
         }
       `}</style>
     </section>
