@@ -72,27 +72,111 @@ const featuredProjects: Project[] = [
 
 // Définition des compétences
 const skills: Skill[] = [
-  { name: 'html5', icon: '/images/skills/html.png' },
-  { name: 'css3', icon: '/images/skills/css.png' },
-  { name: 'javascript', icon: '/images/skills/js.png' },
-  { name: 'typescript', icon: '/images/skills/typescript.svg' },
-  { name: 'react', icon: '/images/skills/react.png' },
-  { name: 'nextjs', icon: '/images/skills/next-js.webp' },
-  { name: 'vuejs', icon: '/images/skills/vuejs.jpg' },
-  { name: 'tailwind', icon: '/images/skills/tailwind.png' },
-  { name: 'nodejs', icon: '/images/skills/node-js.png' },
-  { name: 'php', icon: '/images/skills/php.jpg' },
-  { name: 'python', icon: '/images/skills/python.jpg' },
-  { name: 'laravel', icon: '/images/skills/laravel.jpg' },
-  { name: 'flask', icon: '/images/skills/flask.jpg' },
-  { name: 'nestjs', icon: '/images/skills/nest.jpg' },
-  { name: 'mysql', icon: '/images/skills/mysql.jpg' },
-  { name: 'mongodb', icon: '/images/skills/mongo.jpg' },
-  { name: 'sqlite', icon: '/images/skills/sqlite.jpg' },
-  { name: 'git', icon: '/images/skills/git.jpg' },
-  { name: 'docker', icon: '/images/skills/docker.jpg' },
-  { name: 'figma', icon: '/images/skills/figma.jpg' },
-  { name: 'vscode', icon: '/images/skills/vscode.jpg' },
+  {
+    name: 'html5', icon: '/images/skills/html.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'css3', icon: '/images/skills/css.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'javascript', icon: '/images/skills/js.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'typescript', icon: '/images/skills/typescript.svg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'react', icon: '/images/skills/react.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'nextjs', icon: '/images/skills/next-js.webp',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'vuejs', icon: '/images/skills/vuejs.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'tailwind', icon: '/images/skills/tailwind.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'nodejs', icon: '/images/skills/node-js.png',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'php', icon: '/images/skills/php.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'python', icon: '/images/skills/python.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'laravel', icon: '/images/skills/laravel.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'flask', icon: '/images/skills/flask.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'nestjs', icon: '/images/skills/nest.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'mysql', icon: '/images/skills/mysql.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'mongodb', icon: '/images/skills/mongo.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'sqlite', icon: '/images/skills/sqlite.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'git', icon: '/images/skills/git.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'docker', icon: '/images/skills/docker.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'figma', icon: '/images/skills/figma.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'vscode', icon: '/images/skills/vscode.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
   // Ajoutez toutes les autres compétences ici
 ];
 
