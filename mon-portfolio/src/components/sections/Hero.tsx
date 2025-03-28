@@ -112,7 +112,7 @@ const Hero = () => {
 
       <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row px-4 py-10">
         <div className="md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 md:pr-8">
-          <h1 className="hero-title opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-600 transform translate-y-10 transition-all duration-700">
+          <h1 className="hero-title opacity-0 text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-600 transform translate-y-10 transition-all duration-700 text-shadow-black">
             Bonjour, je suis <span className="block text-white">Wilfried KONAN</span>
           </h1>
 
