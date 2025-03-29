@@ -1,14 +1,14 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { v4 as uuidv4 } from 'uuid'; // Vous devrez installer ce package: npm install uuid
+import { v4 as uuidv4 } from 'uuid';
 
 export async function POST(request) {
   try {
     const data = await request.json();
-    const { name, email, message } = data;
+    const { name, number, email, message } = data;
     
     // Validation
-    if (!name || !email || !message) {
+    if (!name || !email || !number || !message) {
       return new Response(
         JSON.stringify({ message: 'Tous les champs sont requis' }),
         { status: 400 }
@@ -23,6 +23,7 @@ export async function POST(request) {
     const entry = {
       id,
       name,
+      number,
       email,
       message,
       timestamp

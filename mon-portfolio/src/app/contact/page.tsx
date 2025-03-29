@@ -15,6 +15,7 @@ import {
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
+    number: '',
     email: '',
     message: ''
   });
@@ -36,9 +37,23 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
+      if (!nameRegex.test(formData.name)) {
+        alert("Veuillez entrer un nom valide (lettres et espaces uniquement).");
+        return;
+      }
     
-    // Validation basique
-    if (!formData.name || !formData.email || !formData.message) {
+      console.log("Formulaire soumis avec succès :", formData);
+
+  if (!emailRegex.test(formData.email)) {
+    alert("Veuillez entrer une adresse e-mail valide.");
+    return;
+  }
+
+  console.log("Formulaire soumis avec succès :", formData);
+
+    if (!formData.name || !formData.email || !formData.number || !formData.message) {
       setSubmitStatus({
         status: 'error',
         message: 'Veuillez remplir tous les champs.'
@@ -63,11 +78,12 @@ export default function ContactPage() {
         setFormData({
           name: '',
           email: '',
+          number: '',
           message: ''
         });
         setSubmitStatus({
           status: 'success',
-          message: 'Votre message a été enregistré avec succès!'
+          message: 'Votre message a été envoyé avec succès!'
         });
       } else {
         setSubmitStatus({
@@ -133,7 +149,7 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900">
-      {/* Image de fond avec opacity */}
+   
       <div className="absolute inset-0 opacity-10 dark:opacity-15">
         <Image 
           src="/images/signature.png" 
@@ -144,7 +160,7 @@ export default function ContactPage() {
         />
       </div>
       <div className="relative z-1 max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
-        {/* Partie Contactez-moi */}
+      
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
           <h1 className="text-4xl font-bold mb-6 text-blue-300">
             Contactez-moi
@@ -181,9 +197,20 @@ export default function ContactPage() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Votre nom"
+              placeholder="Votre nom et prénom"
               className="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <input 
+              type="text" 
+              name="number"
+              value={formData.number}
+              onChange={handleChange}
+              placeholder="Votre numéro de téléphone"
+              pattern="^\+\d{1,4} \d{8,14}$" 
+              className="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              title="Entrez un numéro au format +(pays) suivi de 8 à 14 chiffres"
+            />
+
             <input 
               type="email" 
               name="email"
