@@ -96,7 +96,7 @@ export default function SkillsPage() {
           quality={50}
         />
       </div>
-      <div className="relative z-1 max-w-7xl mx-auto px-4 pt-28">
+      <div className="relative z-1 max-w-9xl mx-auto px-4 pt-28">
         <div className={`transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0 transform -translate-y-4'}`}>
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Mon Arsenal Technologique

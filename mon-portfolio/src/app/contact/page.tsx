@@ -18,6 +18,72 @@ export default function ContactPage() {
     email: '',
     message: ''
   });
+  
+  const [submitStatus, setSubmitStatus] = useState({
+    status: null, // null, 'success', 'error'
+    message: ''
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Validation basique
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus({
+        status: 'error',
+        message: 'Veuillez remplir tous les champs.'
+      });
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        // Réinitialiser le formulaire
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+        setSubmitStatus({
+          status: 'success',
+          message: 'Votre message a été enregistré avec succès!'
+        });
+      } else {
+        setSubmitStatus({
+          status: 'error',
+          message: data.message || 'Une erreur est survenue. Veuillez réessayer.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        status: 'error',
+        message: 'Une erreur est survenue lors de l\'envoi du message.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const socialLinks = [
     { 
@@ -66,17 +132,17 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className=" relative min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900">
       {/* Image de fond avec opacity */}
-            <div className="absolute inset-0 opacity-10 dark:opacity-15">
-              <Image 
-                src="/images/signature.png" 
-                alt="Background de compétences" 
-                layout="fill" 
-                objectFit="cover" 
-                quality={50}
-              />
-            </div>
+      <div className="absolute inset-0 opacity-10 dark:opacity-15">
+        <Image 
+          src="/images/signature.png" 
+          alt="Background de compétences" 
+          fill
+          style={{ objectFit: 'cover' }}
+          quality={50}
+        />
+      </div>
       <div className="relative z-1 max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
         {/* Partie Contactez-moi */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
@@ -99,28 +165,48 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            {submitStatus.status && (
+              <div className={`p-3 rounded-lg ${
+                submitStatus.status === 'success' 
+                  ? 'bg-green-500/20 text-green-300' 
+                  : 'bg-red-500/20 text-red-300'
+              }`}>
+                {submitStatus.message}
+              </div>
+            )}
+            
             <input 
               type="text" 
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Votre nom"
               className="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input 
               type="email" 
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Votre email"
               className="w-full p-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea 
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Votre message"
               className="w-full p-3 bg-white/10 border border-white/20 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button 
               type="submit"
-              className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              disabled={isSubmitting}
+              className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
             >
-              Envoyer
+              {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
             </button>
-          </form> */}
+          </form>
         </div>
 
         {/* Partie Infographie */}

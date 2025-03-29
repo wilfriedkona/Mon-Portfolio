@@ -68,8 +68,18 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-gray-700">
-      <div className="max-w-5xl mx-auto px-4">
+    <div className="relative min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-gray-700">
+      {/* Image de fond avec opacity */}
+            <div className="absolute inset-0 opacity-10 dark:opacity-5">
+              <Image 
+                src="/images/signature.png" 
+                alt="Background de compétences" 
+                layout="fill" 
+                objectFit="cover" 
+                quality={50}
+              />
+            </div>
+      <div className=" relative z-1 max-w-7xl mx-auto px-4">
         {/* En-tête */}
         <Link 
           href="/projects" 
