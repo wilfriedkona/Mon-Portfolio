@@ -25,7 +25,7 @@ const featuredProjects: Project[] = [
     image: '/images/projects/ecommerce.png',
     technologies: ['Laravel', 'Mysql', 'php', 'HTML', 'CSS', 'JS', 'Tailwind CSS'],
 
-    
+
     featured: true
      },
      {
@@ -183,8 +183,8 @@ const skills: Skill[] = [
 // Composant pour la section des compétences
 const SkillsCarousel = () => {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-4 bg-gray-50 dark:bg-blue-900 overflow-hidden">
+      <div className="max-w-9xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center">Mes Compétences</h2>
         
         <div className="relative w-full overflow-hidden">
