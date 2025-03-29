@@ -4,9 +4,10 @@ import { Project, Skill } from '@/types';
 export const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'Application E-commerce',
+    title: 'Application E-commerce... lib/data',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ticket.png',
+    videoUrl: '/videos/ticket.mp4',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',

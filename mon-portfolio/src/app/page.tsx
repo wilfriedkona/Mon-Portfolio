@@ -11,7 +11,7 @@ const featuredProjects: Project[] = [
   {
     id: 'project-1',
     title: 'Application My Show Time',
-    description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket.',
+    description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket / Dashboard Admin.',
     image: '/images/projects/ticket.png',
     technologies: ['React', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
@@ -20,10 +20,10 @@ const featuredProjects: Project[] = [
   },
   {
     id: 'project-2',
-    title: 'Application E-commerce',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    title: 'Application Blog',
+    description: 'Une plateforme de Blog complète avec compte utilisateur et gestion de commentaire / Dashboard Admin',
     image: '/images/projects/ecommerce.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['Laravel', 'Mysql', 'php', 'HTML', 'CSS', 'JS', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',
     featured: true

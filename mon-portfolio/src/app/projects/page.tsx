@@ -4,7 +4,6 @@ import ProjectCard from '@/components/sections/ProjectCard';
 import { Project } from '@/types';
 import { useState } from 'react';
 
-// Simulez des données (à remplacer par vos propres données)
 const allProjects: Project[] = [
 
   {

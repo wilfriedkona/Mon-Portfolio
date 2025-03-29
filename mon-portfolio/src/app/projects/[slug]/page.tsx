@@ -60,7 +60,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">Projet non trouvé</h1>
         <p className="mb-8">Le projet que vous recherchez n'existe pas ou a été supprimé.</p>
-        <Link href="/projects" className="px-4 py-2 bg-blue-100 text-white rounded-lg hover:bg-blue-700 transition">
+        <Link href="/projects" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
           Retour aux projets
         </Link>
       </div>
@@ -68,12 +68,12 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-blue-900">
+    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-gray-600">
       <div className="max-w-5xl mx-auto px-4">
-        {/* En-tête avec animation d'entrée */}
+        {/* En-tête */}
         <Link 
           href="/projects" 
-          className={`inline-flex items-center text-blue-100 mb-8 transition-all duration-500 ${
+          className={`inline-flex items-center text-blue-600 mb-8 transition-all duration-500 ${
             animationComplete ? 'opacity-100 transform-none' : 'opacity-0 -translate-x-4'
           }`}
         >
@@ -84,6 +84,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         <div className={`relative overflow-hidden rounded-xl shadow-2xl mb-12 transition-all duration-700 ${
           animationComplete ? 'opacity-100 transform-none' : 'opacity-0 -translate-y-8'
         }`}>
+          
+            {project.videoUrl ? (
+              <video 
+                src={project.videoUrl} 
+                controls 
+                className="w-full h-auto"
+                poster={project.image}
+              >
+                Votre navigateur ne prend pas en charge la lecture de vidéos.
+              </video>
+            ) : (
           <div className="relative w-full h-80 md:h-[500px]">
             <Image
               src={project.image}
@@ -103,6 +114,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               </div>
             </div>
           </div>
+        )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
