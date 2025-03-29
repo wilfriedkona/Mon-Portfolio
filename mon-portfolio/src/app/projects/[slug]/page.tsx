@@ -68,12 +68,12 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   }
 
   return (
-    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-gray-600">
+    <div className="min-h-screen pb-20 pt-28 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-gray-700">
       <div className="max-w-5xl mx-auto px-4">
         {/* En-tête */}
         <Link 
           href="/projects" 
-          className={`inline-flex items-center text-blue-600 mb-8 transition-all duration-500 ${
+          className={`inline-flex items-center text-blue-600 font-bold mb-8 transition-all duration-500 ${
             animationComplete ? 'opacity-100 transform-none' : 'opacity-0 -translate-x-4'
           }`}
         >

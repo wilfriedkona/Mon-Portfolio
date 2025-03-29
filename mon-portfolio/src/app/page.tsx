@@ -14,8 +14,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket / Dashboard Admin.',
     image: '/images/projects/ticket.png',
     technologies: ['React', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://myshowtime.onrender.com/',
+
+
     featured: true
   },
   {
@@ -24,8 +24,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme de Blog complète avec compte utilisateur et gestion de commentaire / Dashboard Admin',
     image: '/images/projects/ecommerce.png',
     technologies: ['Laravel', 'Mysql', 'php', 'HTML', 'CSS', 'JS', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+
+    
     featured: true
      },
      {
@@ -34,8 +34,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+
+
     featured: true
      },
      {
@@ -44,8 +44,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+
+
     featured: true
      },
      {
@@ -54,8 +54,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+    // githubUrl: 'https://github.com/username/ecommerce',
+    // demoUrl: 'https://ecommerce-demo.com',
     featured: true
      },
      {
@@ -64,8 +64,8 @@ const featuredProjects: Project[] = [
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+    // githubUrl: 'https://github.com/username/ecommerce',
+    // demoUrl: 'https://ecommerce-demo.com',
     featured: true
     },
 ];

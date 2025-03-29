@@ -4,13 +4,13 @@ import { Project, Skill } from '@/types';
 export const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'Application E-commerce... lib/data',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    title: 'site de réservation',
+    description: 'Plateforme de réservation de tickets complète, conçue pour offrir une expérience fluide et moderne. Chaque ticket est accompagné d’un code QR unique, garantissant une sécurité et une praticité optimales. Dashboard administrateur puissant, qui permet une gestion intuitive des utilisateurs, des concerts et des artistes. Gérez facilement vos données avec des fonctionnalités de CRUD complètes (ajout, modification, suppression) pour les utilisateurs et les concerts. Notre interface est entièrement responsive, offrant une navigation optimale sur tous les appareils.',
     image: '/images/projects/ticket.png',
     videoUrl: '/videos/ticket.mp4',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: 'https://ecommerce-demo.com',
+    demoUrl: 'https://myshowtime.onrender.com/',
     featured: true
   },
   {

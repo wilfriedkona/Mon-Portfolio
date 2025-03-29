@@ -8,8 +8,8 @@ const allProjects: Project[] = [
 
   {
     id: 'project-1',
-    title: 'Application E-commerce',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    title: 'Site de Réservation de Ticket',
+    description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket',
     image: '/images/projects/ticket.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ecommerce',
