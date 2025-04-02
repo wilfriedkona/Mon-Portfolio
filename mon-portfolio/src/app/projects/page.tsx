@@ -21,7 +21,7 @@ const allProjects: Project[] = [
     id: 'project-2',
     title: 'Application E-commerce',
     description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
-    image: '/images/projects/ecommerce.png',
+    image: '/images/projects/flask.png',
     technologies: ['HTML', 'CSS', 'PHP', 'Mysql', 'JavaScript'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',

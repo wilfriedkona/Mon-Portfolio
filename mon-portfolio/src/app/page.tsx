@@ -22,8 +22,8 @@ const featuredProjects: Project[] = [
     id: 'project-2',
     title: 'Application Blog',
     description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
-    image: '/images/projects/ecommerce.png',
-    technologies: ['HTML', 'CSS', 'PHP', 'Mysql', 'JavaScript'],
+    image: '/images/projects/flask.png',
+    technologies: ['Flask', 'Tailwind CSS', 'CSS', 'Python', 'Sqlite'],
 
 
     featured: true
@@ -32,7 +32,7 @@ const featuredProjects: Project[] = [
     id: 'project-3',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
-    image: '/images/projects/ecommerce.png',
+    image: '/images/projects/film.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
 
 
@@ -42,7 +42,7 @@ const featuredProjects: Project[] = [
     id: 'project-4',
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
-    image: '/images/projects/ecommerce.png',
+    image: '/images/projects/blog.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
 
 
