@@ -43,7 +43,7 @@ const featuredProjects: Project[] = [
     title: 'Application Blog',
     description: 'Une plateforme de Blog (Reseau Social) avec partage de textes et medias par user. Commentaire intégré, Dashboard Admin, Authentification(Connexion / Inscription) ',
     image: '/images/projects/blog.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['Laravel', 'PHP', 'JavaScript', 'HTML', 'CSS'],
 
 
     featured: true
@@ -53,7 +53,7 @@ const featuredProjects: Project[] = [
     title: 'Application E-commerce',
     description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
     image: '/images/projects/ecommerce.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Mysql'],
     // githubUrl: 'https://github.com/username/ecommerce',
     // demoUrl: 'https://ecommerce-demo.com',
     featured: true
@@ -63,7 +63,7 @@ const featuredProjects: Project[] = [
     title: 'Application mobile Clone Trello',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/trello.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
     // githubUrl: 'https://github.com/username/ecommerce',
     // demoUrl: 'https://ecommerce-demo.com',
     featured: true
