@@ -11,7 +11,7 @@ const featuredProjects: Project[] = [
   {
     id: 'project-1',
     title: 'Application My Show Time',
-    description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket / Dashboard Admin.',
+    description: 'Une plateforme de reservation de ticket complète et responsive avec génération de code QR unique pour chaque ticket / Dashboard Admin / Authentification Securisé.',
     image: '/images/projects/ticket.png',
     technologies: ['Handle Bare', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
 
@@ -20,8 +20,8 @@ const featuredProjects: Project[] = [
   },
   {
     id: 'project-2',
-    title: 'Application Blog',
-    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
+    title: 'Application Dashboard Admin',
+    description: "Un Dashboard Admin pour la gestion des utilisateurs (CRUD Users) avec authentification securisé",
     image: '/images/projects/flask.png',
     technologies: ['Flask', 'Tailwind CSS', 'CSS', 'Python', 'Sqlite'],
 
@@ -30,10 +30,10 @@ const featuredProjects: Project[] = [
      },
      {
     id: 'project-3',
-    title: 'Application E-commerce',
+    title: 'Application de Film',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/film.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Rest'],
 
 
     featured: true
@@ -51,7 +51,7 @@ const featuredProjects: Project[] = [
      {
     id: 'project-5',
     title: 'Application E-commerce',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
     image: '/images/projects/ecommerce.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     // githubUrl: 'https://github.com/username/ecommerce',
