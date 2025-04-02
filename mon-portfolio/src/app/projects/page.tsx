@@ -20,9 +20,9 @@ const allProjects: Project[] = [
   {
     id: 'project-2',
     title: 'Application E-commerce',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
     image: '/images/projects/ecommerce.png',
-    technologies: ['HTML', 'CSS', 'Mysql', 'JavaScript'],
+    technologies: ['HTML', 'CSS', 'PHP', 'Mysql', 'JavaScript'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',
     featured: true
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
 
   // Grouper les technologies par catégorie pour une meilleure organisation
   const techCategories = {
-    'Frontend': ['React', 'Handle Bare', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'],
+    'Frontend': ['React', 'Handle Bare', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript' ],
     'Backend': ['Node.js', 'PHP', 'Python', 'Flask', 'Nest.js', 'Mysql', 'MongoDB', 'Sqlite', 'Laravel'],
     'Mobile': ['React Native', 'Expo'],
     'Autres': ['TypeScript', 'API REST']

@@ -21,9 +21,9 @@ const featuredProjects: Project[] = [
   {
     id: 'project-2',
     title: 'Application Blog',
-    description: 'Une plateforme de Blog complète avec compte utilisateur et gestion de commentaire / Dashboard Admin',
+    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
     image: '/images/projects/ecommerce.png',
-    technologies: ['Laravel', 'Mysql', 'php', 'HTML', 'CSS', 'JS', 'Tailwind CSS'],
+    technologies: ['HTML', 'CSS', 'PHP', 'Mysql', 'JavaScript'],
 
 
     featured: true
