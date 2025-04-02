@@ -177,6 +177,21 @@ const skills: Skill[] = [
     category: 'frontend',
     proficiency: 0
   },
+  {
+    name: 'canva', icon: '/images/skills/canva.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'photoshop', icon: '/images/skills/ps.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
+  {
+    name: 'illustrator', icon: '/images/skills/ai.jpg',
+    category: 'frontend',
+    proficiency: 0
+  },
   // Ajoutez toutes les autres compétences ici
 ];
 

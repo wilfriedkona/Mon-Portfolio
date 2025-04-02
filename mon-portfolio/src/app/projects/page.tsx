@@ -84,10 +84,10 @@ export default function ProjectsPage() {
 
   // Grouper les technologies par catégorie pour une meilleure organisation
   const techCategories = {
-    'Frontend': ['React', 'Vue.js', 'Next.js', 'Tailwind CSS', 'Material UI', 'D3.js', 'Framer Motion'],
-    'Backend': ['Node.js', 'Express', 'Prisma', 'PostgreSQL', 'MongoDB', 'Firebase'],
+    'Frontend': ['React', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'],
+    'Backend': ['Node.js', 'MySQL', 'MongoDB', 'Sqlite'],
     'Mobile': ['React Native', 'Expo'],
-    'Autres': ['TypeScript', 'Redux', 'API REST']
+    'Autres': ['TypeScript', 'API REST']
   };
 
   // Filtrer les projets quand une technologie est sélectionnée
@@ -217,6 +217,21 @@ export default function ProjectsPage() {
     },
     {
       name: 'vscode', icon: '/images/skills/vscode.jpg',
+      category: 'frontend',
+      proficiency: 0
+    },
+    {
+      name: 'canva', icon: '/images/skills/canva.jpg',
+      category: 'frontend',
+      proficiency: 0
+    },
+    {
+      name: 'photoshop', icon: '/images/skills/ps.jpg',
+      category: 'frontend',
+      proficiency: 0
+    },
+    {
+      name: 'illustrator', icon: '/images/skills/ai.jpg',
       category: 'frontend',
       proficiency: 0
     },

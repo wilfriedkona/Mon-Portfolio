@@ -85,7 +85,10 @@ export const skills: Skill[] = [
   { name: 'Docker', icon: 'docker', category: 'tools', proficiency: 3 },
   { name: 'Figma', icon: 'figma', category: 'tools', proficiency: 3 },
   { name: 'VS Code', icon: 'vscode', category: 'tools', proficiency: 5 },
-  { name: 'Tkinter', icon: 'python', category: 'other', proficiency: 3 }
+  { name: 'Tkinter', icon: 'python', category: 'other', proficiency: 3 },
+  { name: 'Canva', icon: 'canva', category: 'other', proficiency: 5 },
+  { name: 'Photoshop', icon: 'photoshop', category: 'other', proficiency: 3 },
+  { name: 'Illustrator', icon: 'illustrator', category: 'other', proficiency: 4 }
 ];
 
 // Fonction pour récupérer un projet par son slug
