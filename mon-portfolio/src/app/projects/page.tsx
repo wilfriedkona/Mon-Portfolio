@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import ProjectCard from '@/components/sections/ProjectCard';
 import { Project } from '@/types';
 import Image from 'next/image';
-import { main } from 'framer-motion/client';
+// import { main } from 'framer-motion/client';
 
 const allProjects: Project[] = [
   {
@@ -12,7 +12,7 @@ const allProjects: Project[] = [
     title: 'Site de Réservation de Ticket',
     description: 'Une plateforme de réservation de ticket complète avec génération de code QR unique pour chaque ticket',
     image: '/images/projects/ticket.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['Handle Bare', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/username/ticket-reservation',
     demoUrl: 'https://ticket-demo.com',
     featured: true
@@ -22,7 +22,7 @@ const allProjects: Project[] = [
     title: 'Application E-commerce',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
     image: '/images/projects/ecommerce.png',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    technologies: ['HTML', 'CSS', 'Mysql', 'JavaScript'],
     githubUrl: 'https://github.com/username/ecommerce',
     demoUrl: 'https://ecommerce-demo.com',
     featured: true
@@ -84,8 +84,8 @@ export default function ProjectsPage() {
 
   // Grouper les technologies par catégorie pour une meilleure organisation
   const techCategories = {
-    'Frontend': ['React', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'],
-    'Backend': ['Node.js', 'MySQL', 'MongoDB', 'Sqlite'],
+    'Frontend': ['React', 'Handle Bare', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS'],
+    'Backend': ['Node.js', 'PHP', 'Python', 'Flask', 'Nest.js', 'Mysql', 'MongoDB', 'Sqlite', 'Laravel'],
     'Mobile': ['React Native', 'Expo'],
     'Autres': ['TypeScript', 'API REST']
   };

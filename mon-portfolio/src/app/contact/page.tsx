@@ -136,7 +136,7 @@ export default function ContactPage() {
       logo: "/images/skills/ps.jpg" 
     },
     { 
-      name: "Illustrator", 
+      name: "Illustrator",
       percent: 85, 
       logo: "/images/skills/ai.jpg" 
     },

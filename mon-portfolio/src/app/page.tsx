@@ -13,7 +13,7 @@ const featuredProjects: Project[] = [
     title: 'Application My Show Time',
     description: 'Une plateforme de reservation de ticket complète avec génération de code QR unique pour chaque ticket / Dashboard Admin.',
     image: '/images/projects/ticket.png',
-    technologies: ['React', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['Handle Bare', 'Nest.js', 'TypeScript', 'Tailwind CSS'],
 
 
     featured: true
