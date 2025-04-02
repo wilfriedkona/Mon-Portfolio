@@ -62,7 +62,7 @@ const featuredProjects: Project[] = [
     id: 'project-6',
     title: 'Application mobile Clone Trello',
     description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
-    image: '/images/projects/ecommerce.png',
+    image: '/images/projects/trello.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     // githubUrl: 'https://github.com/username/ecommerce',
     // demoUrl: 'https://ecommerce-demo.com',
