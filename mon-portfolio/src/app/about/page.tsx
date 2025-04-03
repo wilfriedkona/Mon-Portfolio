@@ -8,7 +8,7 @@ export default function AboutPage() {
       role: "Directeur Technique",
       company: "TechInnovate",
       quote: "Wilfried a démontré une capacité exceptionnelle à résoudre des problèmes complexes et à livrer des solutions innovantes.",
-      image: "/images/job.jpeg"
+      image: "/images/zoul.png"
     },
     {
       name: "Marie Laurent",
