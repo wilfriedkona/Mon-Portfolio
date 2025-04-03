@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     id: 'project-2',
     title: 'Application Dashboard Admin (Pas encore en ligne)',
-    description: "Un Dashboard Admin pour la gestion des utilisateurs (CRUD Users) avec authentification securisé (Connexion / Inscription)",
+    description: "Application Dashboard Admin\nUn tableau de bord administrateur sécurisé, conçu pour gérer les utilisateurs avec une authentification robuste. Cette application permet aux administrateurs de créer, lire, mettre à jour et supprimer (CRUD) des utilisateurs tout en assurant une gestion des rôles efficace.\n🔹 Technologies utilisées : Flask (backend), React (frontend), SQLite3 (base de données)\n mots de passe Haché avec bcrypt🔹 Sécurité : Authentification avec bcrypt, gestion des rôles\n🔹 Fonctionnalités principales :\n- Inscription et connexion sécurisées\n- Gestion des utilisateurs (CRUD)\n- Attribution et modification des rôles\n- Interface intuitive et moderne\n\nUn outil idéal pour l'administration et la gestion des accès utilisateurs. 🚀",
     image: '/images/projects/flask.png',
     videoUrl: '/videos/flask.mp4',
     technologies: ['Flask', 'Tailwind CSS', 'CSS', 'Python', 'Sqlite'],
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     id: 'project-3',
     title: 'Application de Film (Pas encore en ligne)',
-    description: 'Une plateforme de visualisatioin de film via API avec Dashboard Admin (CRUD Films & Users) et Authentification Sécurisé (Connexion / Inscription)',
+    description: "Une plateforme interactive de visualisation de films intégrant un Dashboard Admin puissant. Grâce à l'API Movie Database, les utilisateurs peuvent explorer une large sélection de films, tandis que les administrateurs disposent d'un panneau de contrôle avancé pour gérer les contenus et les utilisateurs.\n\n🔹 **Technologies utilisées** : Nest.js (backend), Handle Bars (frontend), MongoDB (base de données)\n🔹 **Authentification sécurisée** : Connexion et inscription protégées via bcrypt\n🔹 **Gestion complète** :\n   - 📽️ CRUD des films : Ajout, modification, suppression et affichage des films\n   - 👥 CRUD des utilisateurs : Gestion des comptes et des accès\n🔹 **Expérience fluide et moderne** : Interface intuitive et dynamique, optimisée pour une navigation rapide\n\nUn projet alliant performance et sécurité, idéal pour les passionnés de cinéma et les administrateurs exigeants ! 🎬🚀",
     image: '/images/projects/film.png',
     videoUrl: '/videos/film.mp4',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Rest'],
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     id: 'project-4',
     title: 'Application Blog (Pas encore en ligne)',
-    description: 'Une plateforme de Blog (Reseau Social) avec partage de textes et medias par user. Commentaire intégré, Dashboard Admin, Authentification(Connexion / Inscription) ',
+    description: "Une plateforme de blog interactive avec des fonctionnalités de réseau social, permettant aux utilisateurs de partager des textes et des médias en toute simplicité. Chaque publication peut être commentée, favorisant ainsi l'engagement et l'échange entre membres de la communauté.\n\n🔹 **Fonctionnalités clés** :\n   - 📝 Création et gestion de publications avec texte et médias\n   - 💬 Système de commentaires intégré\n   - 👤 Authentification sécurisée (inscription & connexion)\n   - 🎛️ Dashboard Admin pour la gestion des utilisateurs et du contenu\n\n🔹 **Technologies utilisées** : Laravel (backend), PHP, JavaScript, HTML, CSS\n\nUne plateforme moderne et évolutive, idéale pour partager du contenu et interagir avec une communauté dynamique ! 🚀",
     image: '/images/projects/blog.png',
     videoUrl: '/videos/blog.mp4',
     technologies: ['Laravel', 'PHP', 'JavaScript', 'HTML', 'CSS'],
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     id: 'project-5',
     title: 'Application E-commerce (Pas encore en ligne)',
-    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
+    description: "Une plateforme e-commerce dynamique et fonctionnelle, conçue comme l'un de mes premiers projets d'intégration. Ce site permet aux utilisateurs de parcourir des produits, d'ajouter des articles à leur panier et de finaliser leurs achats en toute simplicité.\n\n🔹 **Fonctionnalités principales** :\n   - 🛍️ Affichage et gestion des produits\n   - 🛒 Panier interactif\n   - 🔐 Système d'authentification pour les utilisateurs\n   - 📦 Gestion des commandes\n\n🔹 **Technologies utilisées** : HTML, CSS, PHP, JavaScript, MySQL\n\nUn projet formateur, combinant les bases du développement web avec les principes fondamentaux d'un site e-commerce. 🚀",
     image: '/images/projects/ecommerce.png',
     // videoUrl: '/videos/ticket.mp4',
     technologies: ['HTML', 'CSS', 'PHP', 'JavaScript', 'Mysql'],
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     id: 'project-6',
     title: 'Application mobile Clone Trello (Pas encore en ligne)',
-    description: "Application Mobile pour la gestion et la repartition ordonnée des taches de Projet avec l'API de Trello ",
+    description: "Une application mobile innovante pour la gestion et la répartition ordonnée des tâches de projet, intégrant l'API Trello pour une synchronisation fluide avec vos espaces de travail. Cette application permet aux utilisateurs de créer, assigner et suivre les tâches en temps réel, tout en offrant une interface simple et efficace pour une gestion optimale des projets.\n\n🔹 **Fonctionnalités principales** :\n   - 🗂️ Gestion des tâches et projets via l'API Trello\n   - ✅ Assignation et suivi des tâches en temps réel\n   - 📱 Interface mobile fluide et responsive\n   - ⚙️ Répartition ordonnée des tâches et priorisation\n\n🔹 **Technologies utilisées** : React, Next.js, TypeScript, Tailwind CSS, Expo\n\nUne solution mobile idéale pour les équipes collaboratives, alliant productivité et flexibilité grâce à l'intégration de Trello. 🚀",
     image: '/images/projects/trello.png',
     videoUrl: '/videos/trello.mp4',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
