@@ -34,7 +34,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-black dark:to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-blue-900 dark:via-black dark:to-blue-900">
       {/* Section Présentation */}
       <section className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1">
@@ -42,8 +42,7 @@ export default function AboutPage() {
             Bonjour, je suis Wilfried KONAN
           </h1>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            Développeur Web Full Stack passionné, je combine créativité technique et design élégant pour créer des expériences numériques uniques. 
-            Avec une solide expertise en React, Next.js et TypeScript, je transforme des concepts complexes en solutions web intuitives et performantes.
+          Développeur Web Full Stack passionné, je combine créativité technique et design élégant pour créer des expériences numériques uniques. Grâce à mes compétences et à ma grande capacité d'adaptation, je transforme des concepts complexes en solutions web intuitives et performantes.
           </p>
           <div className="flex space-x-4 mt-6">
             <Link 
@@ -92,20 +91,20 @@ export default function AboutPage() {
             <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <li className="border-l-4 border-blue-600 pl-4">
                 <h3 className="font-semibold">Développeur Web Full Stack</h3>
-                <p>TechSolutions, Paris - 2022-Présent</p>
+                <p>Wecode by Epitech, Abidjan - 2024-Présent</p>
               </li>
               <li className="border-l-4 border-blue-600 pl-4">
+                <h3 className="font-semibold">Infographe Professionel</h3>
+                <p>Visuals Concepts, Abidjan - 2022-2024</p>
+              </li>
+              {/* <li className="border-l-4 border-blue-600 pl-4">
                 <h3 className="font-semibold">Développeur Frontend</h3>
                 <p>WebAgency, Lyon - 2020-2022</p>
               </li>
               <li className="border-l-4 border-blue-600 pl-4">
                 <h3 className="font-semibold">Développeur Frontend</h3>
                 <p>WebAgency, Lyon - 2020-2022</p>
-              </li>
-              <li className="border-l-4 border-blue-600 pl-4">
-                <h3 className="font-semibold">Développeur Frontend</h3>
-                <p>WebAgency, Lyon - 2020-2022</p>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

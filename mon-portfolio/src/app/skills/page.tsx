@@ -105,7 +105,7 @@ export default function SkillsPage() {
             Mon Arsenal Technologique
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
-            Un écosystème de technologies soigneusement sélectionnées pour créer des expériences web exceptionnelles.
+            Voici mon écosystème de technologieset et mon niveau d'adaptation évolutif pour créer des expériences web exceptionnelles.
           </p>
         </div>
 
