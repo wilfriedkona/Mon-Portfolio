@@ -53,7 +53,7 @@ const featuredProjects: Project[] = [
     title: 'Application E-commerce',
     description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
     image: '/images/projects/ecommerce.png',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Mysql'],
+    technologies: ['HTML', 'CSS', 'PHP', 'JavaScript', 'Mysql'],
     // githubUrl: 'https://github.com/username/ecommerce',
     // demoUrl: 'https://ecommerce-demo.com',
     featured: true
@@ -61,7 +61,7 @@ const featuredProjects: Project[] = [
      {
     id: 'project-6',
     title: 'Application mobile Clone Trello',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes',
+    description: "Application Mobile pour la gestion et la repartition ordonnée des taches de Projet avec l'API de Trello ",
     image: '/images/projects/trello.png',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
     // githubUrl: 'https://github.com/username/ecommerce',

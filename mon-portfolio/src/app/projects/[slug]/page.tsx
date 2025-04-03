@@ -138,7 +138,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               
               {/* Description longue - à remplacer par vos données réelles */}
               <p className="mb-6">
-                Ce projet a été conçu pour répondre aux besoins spécifiques des utilisateurs en matière de {project.title.toLowerCase()}. 
+                Ce projet a été conçu pour répondre aux besoins spécifiques des utilisateurs en matière d' {project.title.toLowerCase()}. 
                 Il combine une interface utilisateur intuitive avec des fonctionnalités robustes pour offrir une expérience utilisateur optimale.
               </p>
               
@@ -175,7 +175,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <Calendar className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
                   <div>
                     <h4 className="font-medium">Date</h4>
-                    <p className="text-gray-600 dark:text-gray-300">2023 - 2024</p>
+                    <p className="text-gray-600 dark:text-gray-300">2024 - 2025</p>
                   </div>
                 </div>
                 
@@ -222,12 +222,12 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               
               <div className="space-y-4">
                 {/* Remplacer par vos données réelles */}
-                <Link href="/projects/other-project-1" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
+                <Link href="/projects" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
                   <h4 className="font-medium">Application de gestion</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">React, Node.js</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">React, Node.js, TypeSripte</p>
                 </Link>
-                <Link href="/projects/other-project-2" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
-                  <h4 className="font-medium">Site e-commerce</h4>
+                <Link href="/projects" className="block p-3 bg-gray-600 hover:bg-gray-900 text-white rounded-lg transition">
+                  <h4 className="font-medium">Autre site</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Next.js, Tailwind CSS</p>
                 </Link>
               </div>
