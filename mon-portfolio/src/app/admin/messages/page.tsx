@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { FaTrashAlt, FaExclamationTriangle, FaEnvelope, FaPhone, FaUser, FaClock } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 interface Contact {
   id: string;
@@ -17,8 +18,11 @@ export default function AdminMessagesPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const router = useRouter();
+
   
   useEffect(() => {
+    
     async function fetchMessages() {
       try {
         const response = await fetch('/api/admin/messages');

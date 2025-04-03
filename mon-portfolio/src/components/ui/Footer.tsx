@@ -11,7 +11,7 @@ const Footer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
@@ -26,6 +26,8 @@ const Footer = () => {
       });
 
       if (response.ok) {
+        // Réinitialiser le champ mot de passe avant la redirection
+        setPassword('');
         // Redirection vers la page d'administration
         router.push('/admin/messages');
       } else {
@@ -77,13 +79,14 @@ const Footer = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                  autoComplete="current-password"
                 />
               </div>
               {error && <p className="text-red-500 text-sm">{error}</p>}
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+                className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Connexion...' : 'Connexion'}
               </button>
