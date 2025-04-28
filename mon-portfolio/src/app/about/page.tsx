@@ -52,7 +52,7 @@ export default function AboutPage() {
               Contactez-moi
             </Link>
             <a 
-              href="/cv.pdf" 
+              href="pdf/CV-Wilfried-KONAN.pdf" 
               target="_blank" 
               className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition"
             >
