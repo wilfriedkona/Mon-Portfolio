@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { kv } from '@vercel/kv';
 
 // Vérifie si l'utilisateur est authentifié
 function isAuthenticated(request: NextRequest) {
@@ -12,14 +11,6 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
-  // Vérification pour Vercel
-  if (process.env.VERCEL) {
-    return NextResponse.json(
-      { message: 'Non implémenté en production' }, 
-      { status: 501 }
-    );
-  }
-
   // Vérifier l'authentification
   if (!isAuthenticated(request)) {
     return NextResponse.json({ message: 'Non autorisé' }, { status: 401 });
@@ -28,19 +19,11 @@ export async function DELETE(
   const id = params.id;
   
   try {
-    const filePath = path.join(process.cwd(), 'data/contacts.json');
-    
-    if (!fs.existsSync(filePath)) {
-      return NextResponse.json(
-        { message: 'Fichier de contacts non trouvé' }, 
-        { status: 404 }
-      );
-    }
-    
-    const contactsData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    // Récupérer les messages depuis Vercel KV
+    const contactsData = await kv.get<Array<{id: string}>>('contacts') || [];
     
     // Filtrer pour supprimer le message spécifié
-    const updatedContacts = contactsData.filter((contact: { id: string }) => contact.id !== id);
+    const updatedContacts = contactsData.filter(contact => contact.id !== id);
     
     if (updatedContacts.length === contactsData.length) {
       return NextResponse.json(
@@ -50,7 +33,7 @@ export async function DELETE(
     }
     
     // Enregistrer les données mises à jour
-    fs.writeFileSync(filePath, JSON.stringify(updatedContacts, null, 2));
+    await kv.set('contacts', updatedContacts);
     
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
