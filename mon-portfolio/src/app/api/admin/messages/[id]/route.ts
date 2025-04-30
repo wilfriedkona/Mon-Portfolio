@@ -33,7 +33,7 @@ export async function DELETE(
     const contactsData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     
     // Filtrer pour supprimer le message spécifié
-    const updatedContacts = contactsData.filter(contact => contact.id !== id);
+    const updatedContacts = contactsData.filter((contact: { id: string; }) => contact.id !== id);
     
     if (updatedContacts.length === contactsData.length) {
       return NextResponse.json(

@@ -34,6 +34,7 @@ const Footer = () => {
         const data = await response.json();
         setError(data.message || 'Une erreur est survenue');
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError('Erreur de connexion');
     } finally {
@@ -48,7 +49,7 @@ const Footer = () => {
           {/* Logo et information */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-xl font-bold mb-4">Wilfried Koadjauh KONAN</h3>
-            <p className="mb-4 text-gray-300">Développeur Web Full Stack passionné par la création d'expériences web modernes et innovantes.</p>
+            <p className="mb-4 text-gray-300">Développeur Web Full Stack passionné par la création d&apos;expériences web modernes et innovantes.</p>
             <p className="text-gray-300">
               <a href="mailto:wilfried.konan@epitech.eu" className="hover:text-blue-400 transition-colors">
                 wilfried.konan@epitech.eu

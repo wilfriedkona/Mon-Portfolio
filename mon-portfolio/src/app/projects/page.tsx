@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import ProjectCard from '@/components/sections/ProjectCard';
-import { Project } from '@/types';
+import { Project, Skill } from '@/types';
 import Image from 'next/image';
 // import { main } from 'framer-motion/client';
 
