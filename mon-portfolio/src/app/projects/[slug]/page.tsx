@@ -59,7 +59,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">Projet non trouvé</h1>
-        <p className="mb-8">Le projet que vous recherchez n'existe pas ou a été supprimé.</p>
+        <p className="mb-8">Le projet que vous recherchez n&apos;existe pas ou a été supprimé.</p>
         <Link href="/projects" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
           Retour aux projets
         </Link>
@@ -138,7 +138,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               
               {/* Description longue - à remplacer par vos données réelles */}
               <p className="mb-6">
-                Ce projet a été conçu pour répondre aux besoins spécifiques des utilisateurs en matière d' {project.title.toLowerCase()}. 
+                Ce projet a été conçu pour répondre aux besoins spécifiques des utilisateurs en matière d&apos; {project.title.toLowerCase()}. 
                 Il combine une interface utilisateur intuitive avec des fonctionnalités robustes pour offrir une expérience utilisateur optimale.
               </p>
               
@@ -146,7 +146,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <ul className="list-disc pl-6 space-y-2">
                 <li>Interface utilisateur responsive et moderne</li>
                 <li>Optimisation des performances pour un chargement rapide</li>
-                <li>Architecture évolutive permettant d'ajouter facilement de nouvelles fonctionnalités</li>
+                <li>Architecture évolutive permettant d&apos;ajouter facilement de nouvelles fonctionnalités</li>
                 <li>Intégration avec différentes API et services externes</li>
                 <li>Tests automatisés pour garantir la qualité du code</li>
               </ul>
@@ -154,9 +154,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <h3 className="text-xl font-semibold mt-8 mb-4">Défis techniques</h3>
               <p>
                 La réalisation de ce projet a présenté plusieurs défis techniques intéressants, notamment 
-                l'optimisation des performances et la gestion de l'état de l'application. Pour résoudre ces problèmes,
-                j'ai utilisé des techniques modernes comme le code splitting, la mise en cache des données et 
-                l'implémentation d'une architecture orientée composants.
+                l&apos;optimisation des performances et la gestion de l&apos;état de l&apos;application. Pour résoudre ces problèmes,
+                j&apos;ai utilisé des techniques modernes comme le code splitting, la mise en cache des données et 
+                l&apos;implémentation d&apos;une architecture orientée composants.
               </p>
             </div>
           </div>

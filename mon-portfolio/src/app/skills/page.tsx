@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { useEffect, useState } from 'react';
@@ -105,7 +106,7 @@ export default function SkillsPage() {
             Mon Arsenal Technologique
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
-            Voici mon écosystème de technologieset et mon niveau d'adaptation évolutif pour créer des expériences web exceptionnelles.
+            Voici mon écosystème de technologieset et mon niveau d&apos;adaptation évolutif pour créer des expériences web exceptionnelles.
           </p>
         </div>
 

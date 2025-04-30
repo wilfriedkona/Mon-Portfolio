@@ -36,6 +36,7 @@ export async function POST(request) {
     const dirPath = path.join(process.cwd(), 'data');
     try {
       await fs.access(dirPath);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       await fs.mkdir(dirPath, { recursive: true });
     }
@@ -45,6 +46,7 @@ export async function POST(request) {
     try {
       const fileContent = await fs.readFile(filePath, 'utf8');
       contacts = JSON.parse(fileContent);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       // Le fichier n'existe probablement pas encore, c'est normal
     }

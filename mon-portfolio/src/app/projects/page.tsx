@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { useState, useEffect } from 'react';
@@ -306,7 +307,7 @@ export default function ProjectsPage() {
           <div className="relative z-1 py-12 px-8 text-white">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 text-shadow-black">Mes Projets</h1>
             <p className="text-lg md:text-xl max-w-2xl">
-              Découvrez mes réalisations récentes et explorez les différentes technologies que j'utilise pour créer des applications web modernes et performantes.
+              Découvrez mes réalisations récentes et explorez les différentes technologies que j&apos;utilise pour créer des applications web modernes et performantes.
             </p>
           </div>
         </div>

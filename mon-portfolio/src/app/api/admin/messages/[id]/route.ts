@@ -30,7 +30,7 @@ export async function DELETE(
       );
     }
     
-    let contactsData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const contactsData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     
     // Filtrer pour supprimer le message spécifié
     const updatedContacts = contactsData.filter(contact => contact.id !== id);

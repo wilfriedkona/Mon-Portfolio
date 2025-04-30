@@ -68,6 +68,7 @@ const Hero = () => {
 
     // Nettoyage du timeout
     return () => clearTimeout(timeout);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subtitle, isDeleting, currentRoleIndex]);
 
   // Animations au chargement des éléments
@@ -125,7 +126,7 @@ const Hero = () => {
           {/* Reste du composant inchangé */}
           <p className="hero-paragraph opacity-0 text-lg mb-8 text-gray-600 transform translate-y-10 transition-all duration-700 delay-500">
             Je crée des applications web et mobile , modernes et performantes.
-            Passionné par le développement, je m'efforce toujours d'apprendre de nouvelles
+            Passionné par le développement, je m&apos;efforce toujours d&apos;apprendre de nouvelles
             technologies et de créer des expériences utilisateur exceptionnelles.
           </p>
 
