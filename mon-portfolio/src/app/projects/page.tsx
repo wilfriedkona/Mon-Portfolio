@@ -19,6 +19,36 @@ const allProjects: Project[] = [
     featured: true
   },
   {
+    id: 'project-7',
+    title: 'Fench Tech Abidjan',
+    description: "Création du site web officiel de la French Tech Abidjan. la French Tech Abidjan est une association qui rassemble les acteurs de l’écosystème technologique français en Côte d’Ivoire.  ",
+    image: '/images/projects/french.png',
+    technologies: ['WordPress', 'Elementor', 'CSS'],
+    // githubUrl: 'https://github.com/username/ecommerce',
+    demoUrl: '/videos/trello.mp4',
+    featured: true
+    },
+    {
+      id: 'project-8',
+      title: 'EkanChat',
+      description: "Application Mobile de Chat (Réseau Social). Un Projet personnel en cours de création pour renforcer mes competences en Flutter ",
+      image: '/images/projects/EkanChat.jpg',
+      technologies: ['Flutter', 'AndroidStudio', 'Firebase'],
+      // githubUrl: 'https://github.com/username/ecommerce',
+      demoUrl: '/videos/trello.mp4',
+      featured: true
+      },
+      {
+        id: 'project-6',
+        title: 'Application mobile Clone Trello',
+        description: "Application Mobile pour la gestion et la repartition ordonnée des taches de Projet avec l'API de Trello ",
+        image: '/images/projects/trello.png',
+        technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
+        // githubUrl: 'https://github.com/username/weather-app',
+        demoUrl: '/videos/trello.mp4',
+        featured: true
+      },
+  {
     id: 'project-2',
     title: 'Application Dashboard Admin',
     description: "Un Dashboard Admin pour la gestion des utilisateurs (CRUD Users) avec authentification securisé (Connexion / Inscription)",
@@ -58,16 +88,8 @@ const allProjects: Project[] = [
     demoUrl: '',
     featured: true
   },
-  {
-    id: 'project-6',
-    title: 'Application mobile Clone Trello',
-    description: "Application Mobile pour la gestion et la repartition ordonnée des taches de Projet avec l'API de Trello ",
-    image: '/images/projects/trello.png',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
-    // githubUrl: 'https://github.com/username/weather-app',
-    demoUrl: '/videos/trello.mp4',
-    featured: true
-  },
+  
+  
 ];
 
 export default function ProjectsPage() {
@@ -237,6 +259,7 @@ export default function ProjectsPage() {
       proficiency: 0
     },
     // Ajoutez toutes les autres compétences ici
+    
   ];
   
   // Composant pour la section des compétences
