@@ -21,15 +21,26 @@ const featuredProjects: Project[] = [
     featured: true
   },
   {
-    id: 'project-2',
-    title: 'Application Dashboard Admin',
-    description: "Un Dashboard Admin pour la gestion des utilisateurs (CRUD Users) avec authentification securisé (Connexion / Inscription)",
-    image: '/images/projects/flask.png',
-    technologies: ['Flask', 'Tailwind CSS', 'CSS', 'Python', 'Sqlite'],
-
-
+    id: 'project-7',
+    title: 'Fench Tech Abidjan',
+    description: "Création du site web officiel de la French Tech Abidjan ",
+    image: '/images/projects/french.png',
+    technologies: ['WordPress', 'Elementor', 'CSS'],
+    // githubUrl: 'https://github.com/username/ecommerce',
+    // demoUrl: 'https://ecommerce-demo.com',
     featured: true
-     },
+    },
+    {
+      id: 'project-8',
+      title: 'EkanChat',
+      description: "Application Mobile de Chat (Réseau Social)",
+      image: '/images/projects/EkanChat.jpg',
+      technologies: ['Flutter', 'AndroidStudio', 'Firebase'],
+      // githubUrl: 'https://github.com/username/ecommerce',
+      // demoUrl: 'https://ecommerce-demo.com',
+      featured: true
+      },
+  
      {
     id: 'project-3',
     title: 'Application de Film',
@@ -40,26 +51,26 @@ const featuredProjects: Project[] = [
 
     featured: true
      },
-     {
-    id: 'project-4',
-    title: 'Application Blog',
-    description: 'Une plateforme de Blog (Reseau Social) avec partage de textes et medias par user. Commentaire intégré, Dashboard Admin, Authentification(Connexion / Inscription) ',
-    image: '/images/projects/blog.png',
-    technologies: ['Laravel', 'PHP', 'JavaScript', 'HTML', 'CSS'],
+    //  {
+    // id: 'project-4',
+    // title: 'Application Blog',
+    // description: 'Une plateforme de Blog (Reseau Social) avec partage de textes et medias par user. Commentaire intégré, Dashboard Admin, Authentification(Connexion / Inscription) ',
+    // image: '/images/projects/blog.png',
+    // technologies: ['Laravel', 'PHP', 'JavaScript', 'HTML', 'CSS'],
 
 
-    featured: true
-     },
-     {
-    id: 'project-5',
-    title: 'Application E-commerce',
-    description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
-    image: '/images/projects/ecommerce.png',
-    technologies: ['HTML', 'CSS', 'PHP', 'JavaScript', 'Mysql'],
-    // githubUrl: 'https://github.com/username/ecommerce',
-    // demoUrl: 'https://ecommerce-demo.com',
-    featured: true
-     },
+    // featured: true
+    //  },
+    //  {
+    // id: 'project-5',
+    // title: 'Application E-commerce',
+    // description: "Une plateforme e-commerce l'un de mes tous premiers projets d'intégration ",
+    // image: '/images/projects/ecommerce.png',
+    // technologies: ['HTML', 'CSS', 'PHP', 'JavaScript', 'Mysql'],
+    // // githubUrl: 'https://github.com/username/ecommerce',
+    // // demoUrl: 'https://ecommerce-demo.com',
+    // featured: true
+    //  },
      {
     id: 'project-6',
     title: 'Application mobile Clone Trello',
@@ -70,6 +81,18 @@ const featuredProjects: Project[] = [
     // demoUrl: 'https://ecommerce-demo.com',
     featured: true
     },
+    {
+      id: 'project-2',
+      title: 'Application Dashboard Admin',
+      description: "Un Dashboard Admin pour la gestion des utilisateurs (CRUD Users) avec authentification securisé (Connexion / Inscription)",
+      image: '/images/projects/flask.png',
+      technologies: ['Flask', 'Tailwind CSS', 'CSS', 'Python', 'Sqlite'],
+  
+  
+      featured: true
+       },
+    
+    
 ];
 
 // Définition des compétences
