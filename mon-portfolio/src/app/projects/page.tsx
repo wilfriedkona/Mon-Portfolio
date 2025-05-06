@@ -33,7 +33,7 @@ const allProjects: Project[] = [
       title: 'EkanChat',
       description: "Application Mobile de Chat (Réseau Social). Un Projet personnel en cours de création pour renforcer mes competences en Flutter ",
       image: '/images/projects/EkanChat.jpg',
-      technologies: ['Flutter', 'AndroidStudio', 'Firebase'],
+      technologies: ['Flutter', 'Android Studio', 'Firebase'],
       // githubUrl: 'https://github.com/username/ecommerce',
       demoUrl: '/videos/trello.mp4',
       featured: true
@@ -43,7 +43,7 @@ const allProjects: Project[] = [
         title: 'Application mobile Clone Trello',
         description: "Application Mobile pour la gestion et la repartition ordonnée des taches de Projet avec l'API de Trello ",
         image: '/images/projects/trello.png',
-        technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo'],
+        technologies: ['React Native', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Expo', 'API REST'],
         // githubUrl: 'https://github.com/username/weather-app',
         demoUrl: '/videos/trello.mp4',
         featured: true
@@ -108,8 +108,8 @@ export default function ProjectsPage() {
   // Grouper les technologies par catégorie pour une meilleure organisation
   const techCategories = {
     'Frontend': ['React', 'Handle Bare', 'Vue.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript' ],
-    'Backend': ['Node.js', 'PHP', 'Python', 'Flask', 'Nest.js', 'Mysql', 'MongoDB', 'Sqlite', 'Laravel'],
-    'Mobile': ['React Native', 'Expo'],
+    'Backend': ['Node.js', 'PHP', 'Python', 'Flask', 'Nest.js', 'Mysql', 'MongoDB', 'Sqlite', 'Laravel', 'Firebase'],
+    'Mobile': ['React Native', 'Expo', 'Flutter', 'Android Studio'],
     'Autres': ['TypeScript', 'API REST']
   };
 
