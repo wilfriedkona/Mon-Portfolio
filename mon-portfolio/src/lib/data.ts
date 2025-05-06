@@ -67,7 +67,29 @@ export const projects: Project[] = [
     // githubUrl: 'https://github.com/username/blog-platform',
     demoUrl: '/videos/trello.mp4',
     featured: false
-  }
+  },
+  {
+    id: 'project-7',
+    title: 'Fench Tech Abidjan',
+    description: "Création du site web officiel de la French Tech Abidjan. la French Tech Abidjan est une association qui rassemble les acteurs de l’écosystème technologique français en Côte d’Ivoire.  ",
+    image: '/images/projects/french.png',
+    videoUrl: '/videos/trello.mp4',
+    technologies: ['WordPress', 'Elementor', 'CSS'],
+    // githubUrl: 'https://github.com/username/ecommerce',
+    demoUrl: '/videos/trello.mp4',
+    featured: true
+    },
+    {
+      id: 'project-8',
+      title: 'EkanChat',
+      description: "Application Mobile de Chat (Réseau Social). Un Projet personnel en cours de création pour renforcer mes competences en Flutter ",
+      image: '/images/projects/EkanChat.jpg',
+      videoUrl: '/videos/trello.mp4',
+      technologies: ['Flutter', 'Android Studio', 'Firebase'],
+      // githubUrl: 'https://github.com/username/ecommerce',
+      demoUrl: '/videos/trello.mp4',
+      featured: true
+      }
 ];
 
 // Compétences
