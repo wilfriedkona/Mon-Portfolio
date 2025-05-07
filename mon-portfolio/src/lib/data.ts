@@ -76,7 +76,7 @@ export const projects: Project[] = [
     videoUrl: '/videos/trello.mp4',
     technologies: ['WordPress', 'Elementor', 'CSS'],
     // githubUrl: 'https://github.com/username/ecommerce',
-    demoUrl: '/videos/trello.mp4',
+    demoUrl: 'https://www.frenchtechabidjan.com',
     featured: true
     },
     {
