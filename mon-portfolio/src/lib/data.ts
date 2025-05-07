@@ -82,12 +82,12 @@ export const projects: Project[] = [
     {
       id: 'project-8',
       title: 'EkanChat',
-      description: "Application Mobile de Chat (Réseau Social). Un Projet personnel en cours de création pour renforcer mes competences en Flutter ",
+      description: "Application Mobile de Chat (Réseau Social). Un Projet personnel en cours de création pour renforcer mes competences en Flutter.   Visitez le site et téléchargez l'application pour android.",
       image: '/images/projects/EkanChat.jpg',
       videoUrl: '/videos/trello.mp4',
       technologies: ['Flutter', 'Android Studio', 'Firebase'],
       // githubUrl: 'https://github.com/username/ecommerce',
-      demoUrl: '/videos/trello.mp4',
+      demoUrl: 'https://mega.nz/file/jnZR3JDZ#1N7oq2bm7uX0RnDz85MPUAF-jxGQsFrnFviCQ5bQ-Tc',
       featured: true
       }
 ];
